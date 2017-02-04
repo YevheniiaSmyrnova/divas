@@ -36,7 +36,7 @@
         {% endif %}
         <ul class="nav navbar-nav navbar-right">
             {% if request.user.is_authenticated %}
-              <li><a>{{ request.user.get_full_name }}</a></li>
+              <li><a>{{ request.user.username}}</a></li>
               <li class="{% block nav_class_logout %}{% endblock %}">
               <a href="{% url 'logout' %}">Выйти</a></li>
             {% else %}
