@@ -36,6 +36,7 @@ class PostCreateView(CreateView):
     model = Post
     fields = ['author', 'title', 'text']
     success_url = reverse_lazy('blog:list')
+    permission_classes = ()
 
     def get_context_data(self, **kwargs):
         """
