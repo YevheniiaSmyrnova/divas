@@ -13,39 +13,37 @@
 
 {% block content %}
     <h1 class="title" align="center"><i><b>DIVAS Girls Blog</b></i></h1>
+    <div class="container">
+        <div class="jumbotron">
+            {% if posts %}
+                {% for post in posts %}
+                    <table border="0" width="100%">
+                        <tr valign="top">
+                            <td width="15%" colspan="2">
+                                <center>
+                                    <a href="{% static 'images/divas_2.jpg' %}">
+                                        <img class="media-object"
+                                             src="{% static 'images/divas_2.jpg' %}"
+                                             width="150" alt="...">
+                                    </a>
+                                    <p>{{ post.published_date }}</p>
+                                </center>
+                            </td>
 
-    {% if posts %}
-        <div class="container">
-            <div class="jumbotron">
+                            <td width="5%"></td>
 
-    {% for post in posts %}
-        <table border="0" width="100%">
-                <tr valign="top">
-                    <td width="15%" colspan="2">
-                        <center>
-                            <a href="{% static 'images/divas_2.jpg' %}">
-                                <img class="media-object"
-                                     src="{% static 'images/divas_2.jpg' %}"
-                                     width="150" alt="...">
-                            </a>
-                            <p>{{ post.published_date }}</p>
-                        </center>
-                    </td>
+                            <td width="80%">
 
-                    <td width="5%"></td>
+                                <h1>{{ post.title }}</h1>
+                                <p>{{ post.text|linebreaksbr }}</p>
 
-                    <td width="80%">
-
-                <h1>{{ post.title }}</h1>
-                <p>{{ post.text|linebreaksbr }}</p>
-
-                    </td>
-                </tr>
-            </table>
-<hr>
-    {% endfor %}
+                            </td>
+                        </tr>
+                    </table>
+                    <hr>
+                {% endfor %}
+            {% else %}<p>К сожелению, пока еще нет постов</p>
+            {% endif %}
         </div>
-        </div>
-    {% else %}<p>К сожелению, пока еще нет постов</p>
-    {% endif %}
+    </div>
 {% endblock content %}
