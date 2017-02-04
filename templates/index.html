@@ -4,41 +4,73 @@
 {% load staticfiles %}
 
 
-{% block title %}DIVAS {% endblock%}
+{% block title %}DIVAS {% endblock %}
 
 
-{% block nav_class_index %}active{% endblock%}
+{% block nav_class_index %}active{% endblock %}
 
 
 
 {% block content %}
-<div class="container">
-  <div class="jumbotron">
-	<h1 align="center"><i><b>Школа DIVAS</b></i></h1>
-	<p align="justify">Хочешь соблазнительно и сексуально двигаться?
-        Давно хотела заняться собой? Приходи танцевать!</p>
-        <p align="justify">- мягкие и пластичные движения</p>
-        <p align="justify">- танцевальные связки</p>
-        <p align="justify">- силовые нагрузки</p>
-        <p align="justify">- растяжка</p>
-        <p align="justify">Как результат - подтянутое и гибкое тело, готовое ловить
-        заинтересованные взгляды и очаровывать окружающих ;)</p>
-        <p align="justify">Занятия по стрип пластике - лучший способ провести вечер с
-        удовольствием и пользой для своего тела!</p>
-        <p align="justify">Тебе понравится ;)</p>
-        <p align="justify">Звони и запишись на пробное занятие:</p>
-        <p align="justify">097 553 66 67</p>
-        <p align="justify">095 558 98 37 Дарина</p>
-    <p><a class="btn btn-primary btn-lg"
-        href="https://www.youtube.com/channel/UC5tq6fcDiEsm-UDVclZ7bIg"
-        role="button">
-    <span class="glyphicon glyphicon-education" aria-hidden="true">
-    </span> DIVAS Youtube</a>
-    <a class="btn btn-primary btn-lg"
-        href="https://www.instagram.com/darina.divas.dance/"
-        role="button">
-    <span class="glyphicon glyphicon-education" aria-hidden="true">
-    </span> DIVAS Instagram</a></p>
-  </div>
-</div>
+    <div class="navbar navbar-inverse">
+        <div class="container">
+            <h1 class="title" align="center"><i><b>Школа DIVAS</b></i></h1>
+            <div class="container">
+                <div class="jumbotron">
+                    <table border="0" width="100%">
+                        <tr valign="top">
+                            <td width="25%" colspan="2">
+                                <center>
+                                    <a href="{% static 'images/divas.jpg' %}">
+                                        <img class="media-object"
+                                             src="{% static 'images/divas.jpg' %}"
+                                             width="300" alt="...">
+                                    </a>
+                                </center>
+                            </td>
+
+                            <td width="5%"></td>
+
+                            <td width="70%">
+                                <p align="justify">Хочешь соблазнительно и
+                                    сексуально двигаться?
+                                    Давно хотела заняться собой? Приходи
+                                    танцевать!</p>
+                                <p align="justify">- мягкие и пластичные
+                                    движения</p>
+                                <p align="justify">- танцевальные связки</p>
+                                <p align="justify">- силовые нагрузки</p>
+                                <p align="justify">- растяжка</p>
+                                <p align="justify">Как результат - подтянутое и
+                                    гибкое тело, готовое ловить
+                                    заинтересованные взгляды и очаровывать
+                                    окружающих ;)</p>
+                                <p align="justify">Занятия по стрип пластике -
+                                    лучший способ провести вечер с
+                                    удовольствием и пользой для своего
+                                    тела!</p>
+                                <p align="justify">Тебе понравится ;)</p>
+                                <p align="justify">Звони и запишись на пробное
+                                    занятие:</p>
+                                <p align="justify">097 553 66 67</p>
+                                <p align="justify">095 558 98 37 Дарина</p>
+                                <p><a class="btn btn-default btn-lg black"
+                                      href="https://www.youtube.com/channel/UC5tq6fcDiEsm-UDVclZ7bIg"
+                                      role="button">
+                                    <span class="glyphicon glyphicon-star-empty"
+                                          aria-hidden="true"></span>
+                                    DIVAS Youtube</a>
+                                    <a class="btn btn-primary btn-lg black"
+                                       href="https://www.instagram.com/darina.divas.dance/"
+                                       role="button">
+                                        <span class="glyphicon glyphicon-star"
+                                              aria-hidden="true"></span>
+                                        DIVAS Instagram</a></p>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
 {% endblock content %}

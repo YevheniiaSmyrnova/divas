@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+
+{% load staticfiles %}
+
+
+{% block title %}Блог{% endblock %}
+
+
+{% block nav_class_blog %}active{% endblock %}
+
+
+
+{% block content %}
+    <div class="container">
+        <div class="jumbotron">
+            <h1 align="center"><i><b>DIVAS Girls Blog</b></i></h1>
+
+            {% for post in posts %}
+                <div class="container">
+                    <div class="jumbotron">
+                        <p>Дата поста: {{ post.published_date }}</p>
+                        <h1><a href="">{{ post.title }}</a></h1>
+                        <p>{{ post.text|linebreaksbr }}</p>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock content %}
