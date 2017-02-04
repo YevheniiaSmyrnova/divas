@@ -28,10 +28,24 @@
 
         <div class="collapse navbar-collapse"
              id="bs-example-navbar-collapse-1">
+        {% if request.user.is_authenticated %}
             <ul class="nav navbar-nav">
                 <li class="{% block nav_class_blog %}{% endblock %}">
-                    <a href="{% url 'blog:post_list' %}">Блог</a></li>
+                    <a href="{% url 'blog:list' %}">Блог</a></li>
             </ul>
+        {% endif %}
+        <ul class="nav navbar-nav navbar-right">
+            {% if request.user.is_authenticated %}
+              <li><a>{{ request.user.get_full_name }}</a></li>
+              <li class="{% block nav_class_logout %}{% endblock %}">
+              <a href="{% url 'logout' %}">Выйти</a></li>
+            {% else %}
+              <li class="{% block nav_class_register %}{% endblock %}">
+              <a href="{% url 'register' %}">Зарегистрироваться</a></li>
+              <li class="{% block nav_class_login %}{% endblock %}">
+              <a href="{% url 'login' %}">Войти</a></li>
+            {% endif %}
+          </ul>
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
 </nav>

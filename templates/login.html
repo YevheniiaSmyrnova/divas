@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+
+{% load staticfiles %}
+
+
+{% block title %}Вход{% endblock %}
+
+
+{% block nav_class_login %}active{% endblock %}
+
+
+{% block content %}
+    <h1 class="title" align="center"><i><b>Добро пожаловать</b></i></h1>
+    <div class="container">
+        <div class="jumbotron">
+            <form class="form-horizontal" action="" method="post">
+                {% csrf_token %}
+                <div class="form-group">
+                    <label class="control-label col-sm-2" for="id_username">Логин:</label>
+                    <div class="col-sm-3">
+                        <input class="form-control" id="id_username"
+                               maxlength="254"
+                               name="username" type="text"
+                               placeholder="Введите логин">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-2" for="id_password">Пароль:</label>
+                    <div class="col-sm-3">
+                        <input class="form-control" id="id_password"
+                               name="password"
+                               type="password" placeholder="Введите пароль">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <button type="submit" class="btn btn-default black">
+                            Войти
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+{% endblock content %}

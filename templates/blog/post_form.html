@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+
+{% load staticfiles %}
+
+
+{% block title %}Новый пост{% endblock %}
+
+
+{% block nav_class_blog %}active{% endblock %}
+
+
+
+{% block content %}
+    <h1 class="title" align="center"><i><b>{{ page_title }}</b></i></h1>
+    <div class="container">
+        <div class="jumbotron">
+            <form method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <input class="btn btn-default black" type="submit"
+                       value="Сохранить"/>
+                <a class="btn btn-default" href="{% url 'blog:list' %}"
+                   role="button">Отменить</a>
+            </form>
+        </div>
+    </div>
+{% endblock content %}
