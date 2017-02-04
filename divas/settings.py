@@ -39,6 +39,14 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
 )
 
+THIRD_PARTY_APPS = ()
+
+PROJECT_APPS = (
+    'blog',
+)
+
+INSTALLED_APPS = INSTALLED_APPS + PROJECT_APPS + THIRD_PARTY_APPS
+
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
