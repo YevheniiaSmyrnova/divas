@@ -4,7 +4,7 @@ Main urls module
 from django.conf.urls import include, url
 from django.contrib import admin
 from django.contrib.auth.views import login, logout
-from divas.views import IndexView, RegisterCreateView
+from divas.views import IndexView
 
 urlpatterns = [
     url(r'^login/$', login, {"template_name": "login.html"}, name='login'),
