@@ -2,7 +2,7 @@
 
 Simple django application for DIVAS dance classes.
 
-Demo is hosted as a [pythonanywhere](https://yevheniia.pythonanywhere.com/).
+Demo is hosted as a [pythonanywhere](http://yevheniia.pythonanywhere.com/).
 
 Note that the webpage language is Russian.
 
