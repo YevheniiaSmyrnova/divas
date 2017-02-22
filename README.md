@@ -18,5 +18,5 @@ Note that the webpage language is Russian.
 ```
 git clone https://github.com/YevheniiaSmyrnova/divas.git
 cd divas
-sudo docker-compose up
+docker-compose up
 ```
